@@ -18,19 +18,21 @@ function bubbleSort(array) {
   let counter = 0;
   for (let i = 0; i < array.length; i++) {
     if (array[i] > array[i + 1]) {
-      const swapped = swap(array[i], array[i+1])
-      array.splice(i, 2, swapped[0], swapped[1])
-      counter++
+      const swapped = swap(array[i], array[i + 1]);
+      array.splice(i, 2, swapped[0], swapped[1]);
+      counter++;
     }
   }
   if (counter === 0) {
-    return array
+    return array;
   } else {
-    counter = 0
-    return bubbleSort(array)
+    counter = 0;
+    return bubbleSort(array);
   }
 }
 
-function swap (num1, num2) {
-  return [num2, num1]
+function swap(num1, num2) {
+  return [num2, num1];
 }
+
+console.log(bubbleSort([3, 6, 4, 10, 16, 3, 72, 1]));
